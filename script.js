@@ -36,15 +36,25 @@ function addListAfterKeypress(event) {
 	}
 }
 
-
-button.addEventListener("click", addListAfterClick);  //Add Lists on Click | EVENT
-
-input.addEventListener("keypress", addListAfterKeypress); //Add Lists on Keypress |EVENT
-
 // Task is Done
 
 function done(task){
 	if(task.target.tagName==="LI"){
-		task.ta
+		task.target.classList.toggle("done");
 	}
 }
+
+function deleteTask(element){
+	if(element.target.className==="del-btn"){
+		element.target.parentElement.remove();
+	}
+}
+
+function deleteTaskClick(element){
+	done(element);
+	deleteTask(element);
+}
+
+ul.addEventListener("click", deleteTaskClick);
+button.addEventListener("click", addListAfterClick);  //Add Lists on Click | EVENT
+input.addEventListener("keypress", addListAfterKeypress); //Add Lists on Keypress |EVENT
