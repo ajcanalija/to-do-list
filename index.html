@@ -6,7 +6,13 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<!--<div class="color-container">
+		<label>Change Background Color:</label><input type="color" name="color1" value="#ff0000" class="color color1">
+		<br>
+		<label>Change Font Color:</label><input type="color" name="color2" value="#ffffff" class="color color2">
+	</div>-->
 	<div class="container">
+		
 		<h1>To Do List</h1>
 		<!--<p id="first">Get it done today</p>-->
 		<div class="input-container">
@@ -15,33 +21,18 @@
 		</div>
 		
 		<ul id="list">
+			
 			<div class="tasklist">
-				<li class="task">Buy notebook</li>
-				<button class="btn del-btn"><i class="fa fa-close"></i></button>
+				<input id ="complete" class="check" type="checkbox">
+				<li class="task">
+					Sample Task 1 
+				</li>
+				<button class="btn del-btn">Del</button>
 			</div>
-			<div class="tasklist">
-				<li class="task">Gas up</li>
-				<button class="btn del-btn"><i class="fa fa-close"></i></button>
-			</div>
-			<div class="tasklist">
-				
-				<li class="task">wash car</li>
-				<button class="btn del-btn"><i class="fa fa-close"></i></button>
-			</div>
-			<div class="tasklist">
-				
-				<li class="task">finish Js Project</li>
-				<button class="btn del-btn"><i class="fa fa-close"></i></button>
-			</div>
-			<div class="tasklist">
-				
-				<li class="task">Get ready for road trip</li>
-				<button class="btn del-btn"><i class="fa fa-close"></i></button>
-			</div>
+		
 		</ul>
 	</div>
-	
 	<script type="text/javascript" src="/script.js"></script>
-	<script src="https://kit.fontawesome.com/29011eca1b.js" crossorigin="anonymous"></script>
+	
 </body>
 </html>
