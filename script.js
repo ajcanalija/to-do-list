@@ -48,6 +48,12 @@ function done(task){
 	}
 }
 
+/*function cb (complete){
+	if(complete.checked){
+		task.target.classList.toggle("done");
+	}
+}*/
+
 //Deletes a task when "del" button is clicked
 function deleteTask(element){
 	if(element.target.className==="del-btn"){
