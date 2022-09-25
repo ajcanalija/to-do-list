@@ -1,26 +1,25 @@
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
-var checkbox = document.getElementsByClassName("check");
 
 
 //function for creating list items with button
 function createListElement(){
 	var div=document.createElement("div");
 	//var checkBox=document.createElement("input[type=checkbox]");
-	var check = document.createElement("INPUT");
-	check.setAttribute("type","checkbox");
-	check.classList.add("check");
 	var li= document.createElement("li");
-	var delBtn=document.createElement("button");	
+	var delBtn=document.createElement("button");
+	//var doneBtn = document.createElement("button");
 	div.classList.add("tasklist");
 	ul.appendChild(div);
-	div.append(check,li, delBtn);
+	div.append(li, delBtn);
 	li.classList.add("task");
 	li.appendChild(document.createTextNode(input.value));
 	input.value = "";
 	delBtn.classList.add("del-btn");
 	delBtn.innerHTML='Del';
+	//doneBtn.classList.add("done-btn");	
+	//doneBtn.innerHTML='Done';
 }
 
 function inputLength() {
@@ -41,17 +40,16 @@ function addListAfterKeypress(event) {
 	}
 }
 
-// Task is Done
-/*for check box. create a function that executes done() when checkbox
-is checked*/
 
-
-//Strikesthrough tasks when clicked
 function done(task){
 	if(task.target.tagName==="LI"){
 		task.target.classList.toggle("done");
 	}
 }
+
+// Task is Done
+/*for check box. create a function that executes done() when checkbox
+is checked*/
 
 
 //Deletes a task when "del" button is clicked
@@ -70,4 +68,3 @@ function deleteTaskClick(element){
 ul.addEventListener("click", deleteTaskClick);
 button.addEventListener("click", addListAfterClick);  //Add Lists on Click | EVENT
 input.addEventListener("keypress", addListAfterKeypress); //Add Lists on Keypress |EVENT
-checkbox.addEventListener("click", done); //did not work
