@@ -93,3 +93,18 @@ li{
 .options{
   margin: 10px;
 }
+
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 20px;
+	height: 20px;
+  padding: 0px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0px;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}

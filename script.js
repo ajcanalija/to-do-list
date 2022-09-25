@@ -1,7 +1,8 @@
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
-var complete = document.getElementById("complete")
+var checkbox = document.getElementsByClassName("check");
+
 
 //function for creating list items with button
 function createListElement(){
@@ -9,6 +10,7 @@ function createListElement(){
 	//var checkBox=document.createElement("input[type=checkbox]");
 	var check = document.createElement("INPUT");
 	check.setAttribute("type","checkbox");
+	check.classList.add("check");
 	var li= document.createElement("li");
 	var delBtn=document.createElement("button");	
 	div.classList.add("tasklist");
@@ -40,6 +42,9 @@ function addListAfterKeypress(event) {
 }
 
 // Task is Done
+/*for check box. create a function that executes done() when checkbox
+is checked*/
+
 
 //Strikesthrough tasks when clicked
 function done(task){
@@ -48,11 +53,6 @@ function done(task){
 	}
 }
 
-/*function cb (complete){
-	if(complete.checked){
-		task.target.classList.toggle("done");
-	}
-}*/
 
 //Deletes a task when "del" button is clicked
 function deleteTask(element){
@@ -70,3 +70,4 @@ function deleteTaskClick(element){
 ul.addEventListener("click", deleteTaskClick);
 button.addEventListener("click", addListAfterClick);  //Add Lists on Click | EVENT
 input.addEventListener("keypress", addListAfterKeypress); //Add Lists on Keypress |EVENT
+checkbox.addEventListener("click", done); //did not work
