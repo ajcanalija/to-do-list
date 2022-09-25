@@ -5,23 +5,23 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body id ="body">
 	
-	<div class="container">
+	<div class="design-options-container">
 		<div class="design-menu">
 			<!--<p>Design Options</p>-->
 			<div class="design-options">
 				<div class="options bg-div">
-					<input type="color" class="color bg-color">
+					<input type="color" name="bg-color" value="#4F5D75" class="color bg-color">
 					<label for="background-color">Background</label>
 					
 				</div>
 				<div class="options font-div">
-					<input type="color" class="color font-color">
+					<input type="color" name="font-color" value="#ffffff" class="color font-color">
 					<label for="font-color">Font</label>
 					
 				</div>
-				<div class="options btn-div">
+				<!--<div class="options btn-div">
 					<input type="color" class="color btn-color">
 					<label for="font-color">Del Buttons</label>
 					
@@ -30,10 +30,11 @@
 					<input type="color" class="color enter-btn-color">
 					<label for="font-color">Enter Button</label>
 					
-				</div>
+				</div>-->
 			</div>
 		</div>
-		
+	</div>
+	<div class="container" id="container">
 		<h1>TO DO LIST</h1>
 		<!--<p id="first">Get it done today</p>-->
 		<div class="input-container">
@@ -48,13 +49,15 @@
 				<li class="task">
 					<p class="li-p">Sample Task 1 </p>
 				</li>
-				<button class="btn del-btn">Del</button>
-				<button class="btn done-btn">Done</button>
+				<button class="btn del-btn"><i class="fa-solid fa-xmark"></i></button>
+				<button class="btn done-btn"><i class="fa-solid fa-check"></i></button>
 
 			</div>
 		-->
+
 		</ul>
 	</div>
+	<script src="https://kit.fontawesome.com/29011eca1b.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="/script.js"></script>
 	
 </body>

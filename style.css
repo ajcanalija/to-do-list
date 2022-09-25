@@ -1,8 +1,9 @@
-*{
+body{
+  /*background: #4F5D75;*/
   font-family: sans-serif;
   font-size: 18px;
   margin: 0;
-  color: #fff;
+  /*color: #fff;*/
 }
 .container{
   display: flex;
@@ -10,7 +11,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #4F5D75;
+ 
 }
 
 h1{
@@ -74,6 +75,9 @@ li{
   font-size: 12px;
   /*cursor: pointer;*/
 }
+.fa-xmark{
+  color: white;
+}
 .done-btn {
   background-color: green;
   border: none;
@@ -90,6 +94,7 @@ li{
 
 /* Design Options---Temporary Placement*/
 .design-menu{
+  background:rgb(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,8 +109,8 @@ li{
 }
 
 
-input[type="color"] {
-	-webkit-appearance: none;
+/*input[type="color"] {
+/*	-webkit-appearance: none;
 	border: none;
 	width: 20px;
 	height: 20px;
